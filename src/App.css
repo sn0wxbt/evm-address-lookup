@@ -2,7 +2,10 @@
   text-align: center;
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: white; /* Adjust text color for better contrast */
 }
 
 textarea {
@@ -34,12 +37,15 @@ table {
   margin: 20px auto;
   border-collapse: collapse;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
 }
 
 th, td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
+  background-color: rgba(255, 255, 255, 0.9); /* Ensure table cells have a solid background */
+  color: #333; /* Dark text color for better readability */
 }
 
 th {
@@ -58,6 +64,10 @@ p {
   margin-top: 20px;
   font-style: italic;
   color: #555;
+}
+
+.warning {
+  color: #cf1c1c;
 }
 
 .contributors {

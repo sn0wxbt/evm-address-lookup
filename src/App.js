@@ -89,7 +89,7 @@ function App() {
               ))}
             </tbody>
           </table>
-          <p>If the data is blank, your wallet is not in the top 920k.</p>
+          <p className='warning'>If the data is blank, your wallet is not in the top 920k.</p>
         </>
       )}
       <div className="contributors">
