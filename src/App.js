@@ -1,23 +1,67 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { fetchData } from './data';
 import './App.css';
 
 function App() {
+  const [addresses, setAddresses] = useState('');
+  const [data, setData] = useState([]);
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    fetchData().then(setData);
+  }, []);
+
+  const handleInputChange = (e) => {
+    setAddresses(e.target.value);
+  };
+
+  const handleSearch = () => {
+    const addressList = addresses
+      .split('\n')
+      .map(addr => addr.trim().toLowerCase())
+      .filter(addr => addr);
+    const filteredResults = data
+      .filter(record => addressList.includes(record.User.toLowerCase()))
+      .sort((a, b) => parseFloat(b['Fees Spent']) - parseFloat(a['Fees Spent']));
+    setResults(filteredResults);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>EVM Address Lookup</h1>
+      <textarea
+        value={addresses}
+        onChange={handleInputChange}
+        placeholder="Enter EVM addresses, one per line"
+        rows="10"
+        cols="50"
+      />
+      <br />
+      <button onClick={handleSearch}>Search</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>User</th>
+            <th>Transactions</th>
+            <th>Early User</th>
+            <th>Durable User</th>
+            <th>Fees Spent</th>
+          </tr>
+        </thead>
+        <tbody>
+          {results.map((result, index) => (
+            <tr key={index}>
+              <td>{result.Rank}</td>
+              <td>{result.User}</td>
+              <td>{result.Transactions}</td>
+              <td>{result['Early User']}</td>
+              <td>{result['Durable User']}</td>
+              <td>{result['Fees Spent']}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
