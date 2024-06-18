@@ -82,8 +82,9 @@ function App() {
       <div className="contributors">
         <h2>Contributors</h2>
         <ul>
-          <li>John Doe - <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer">@johndoe</a></li>
-          <li>Jane Smith - <a href="https://twitter.com/janesmith" target="_blank" rel="noopener noreferrer">@janesmith</a></li>
+        <li>sn0wxbt, made dash- <a href="https://twitter.com/sn0wxbt" target="_blank" rel="noopener noreferrer">@sn0wxbt</a></li>
+          <li>frank white, helped pull data - <a href="https://twitter.com/SolvingFrank" target="_blank" rel="noopener noreferrer">@SolvingFrank</a></li>
+          <li>0xtoshi, provided data - <a href="https://twitter.com/0xtoshi" target="_blank" rel="noopener noreferrer">@0xtoshi</a></li>
         </ul>
       </div>
     </div>
