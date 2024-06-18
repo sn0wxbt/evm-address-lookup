@@ -99,6 +99,7 @@ function App() {
           <li>sn0wxbt, made dash - <a href="https://twitter.com/sn0wxbt" target="_blank" rel="noopener noreferrer">@sn0wxbt</a></li>
           <li>frank white, helped pull data - <a href="https://twitter.com/SolvingFrank" target="_blank" rel="noopener noreferrer">@SolvingFrank</a></li>
           <li>0xtoshi, provided data - <a href="https://twitter.com/0xtoshi" target="_blank" rel="noopener noreferrer">@0xtoshi</a></li>
+          <li>data pulled from: <a href="https://dune.com/0xtoshi/layerzero-early-and-druable-user-fees-spent" target="_blank" rel="noopener noreferrer">Dune Dashboard</a></li>
         </ul>
       </div>
     </div>
