@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>EVM Address Lookup</h1>
+      <h1>LayerZero Bulk Protocol Fee Checker</h1>
       <textarea
         value={addresses}
         onChange={handleInputChange}
