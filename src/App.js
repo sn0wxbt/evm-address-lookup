@@ -21,9 +21,10 @@ function App() {
       .split('\n')
       .map(addr => addr.trim().toLowerCase())
       .filter(addr => addr);
-    const filteredResults = data
-      .filter(record => addressList.includes(record.User.toLowerCase()))
-      .sort((a, b) => parseFloat(b['Fees Spent']) - parseFloat(a['Fees Spent']));
+    const filteredResults = addressList.map(addr => {
+      const record = data.find(record => record.User.toLowerCase() === addr);
+      return record || { User: addr, Rank: '', Transactions: '', 'Early User': '', 'Durable User': '', 'Fees Spent': '' };
+    }).sort((a, b) => parseFloat(b['Fees Spent']) - parseFloat(a['Fees Spent']) || 0);
     setResults(filteredResults);
   };
 
@@ -77,12 +78,12 @@ function App() {
           ))}
         </tbody>
       </table>
+      <p>If the data is blank, your wallet is not in the top 920k.</p>
       <div className="contributors">
         <h2>Contributors</h2>
         <ul>
-          <li>sn0wxbt, made dash- <a href="https://twitter.com/sn0wxbt" target="_blank" rel="noopener noreferrer">@sn0wxbt</a></li>
-          <li>frank white, helped pull data - <a href="https://twitter.com/SolvingFrank" target="_blank" rel="noopener noreferrer">@SolvingFrank</a></li>
-          <li>0xtoshi, provided data - <a href="https://twitter.com/0xtoshi" target="_blank" rel="noopener noreferrer">@0xtoshi</a></li>
+          <li>John Doe - <a href="https://twitter.com/johndoe" target="_blank" rel="noopener noreferrer">@johndoe</a></li>
+          <li>Jane Smith - <a href="https://twitter.com/janesmith" target="_blank" rel="noopener noreferrer">@janesmith</a></li>
         </ul>
       </div>
     </div>

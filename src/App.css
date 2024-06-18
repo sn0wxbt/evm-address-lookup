@@ -29,3 +29,34 @@ th, td {
 th {
   background-color: #f2f2f2;
 }
+
+p {
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.contributors {
+  margin-top: 20px;
+}
+
+.contributors h2 {
+  margin-bottom: 10px;
+}
+
+.contributors ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contributors li {
+  margin: 5px 0;
+}
+
+.contributors a {
+  color: #1DA1F2;
+  text-decoration: none;
+}
+
+.contributors a:hover {
+  text-decoration: underline;
+}
