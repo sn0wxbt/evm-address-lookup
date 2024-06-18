@@ -5,7 +5,7 @@
   background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
-  color: white; /* Adjust text color for better contrast */
+  color: rgb(191, 25, 191); /* Adjust text color for better contrast */
 }
 
 textarea {
@@ -73,6 +73,8 @@ p {
 
 .contributors {
   margin-top: 40px;
+  color: #f7f7f7;
+  font-size: medium;
 }
 
 .contributors h2 {
