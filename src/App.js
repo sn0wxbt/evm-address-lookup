@@ -53,6 +53,7 @@ function App() {
   return (
     <div className="App">
       <h1>LayerZero Bulk Protocol Fee Checker</h1>
+      <p className='mobilewarning'>Use on desktop, doesn't work well on mobile</p>
       <textarea
         value={addresses}
         onChange={handleInputChange}

@@ -69,6 +69,15 @@ p {
 
 .warning {
   color: #cf1c1c;
+  font-style: italic;
+  font-size: medium;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .contributors {
@@ -88,6 +97,15 @@ p {
 
 .contributors li {
   margin: 5px 0;
+  font-size: medium;
+  font-style: italic;
+  background-color: #130d0d19;
+  border-radius: 1px;
+  padding: 1px;
+  margin: 10px;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
 }
 
 .contributors a {
@@ -95,6 +113,18 @@ p {
   text-decoration: none;
 }
 
+.mobilewarning {
+  color: #cf251c;
+  font-size: medium;
+  font-style: italic;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  width: 20%;
+  margin: 0 auto;
+}
 .contributors a:hover {
   text-decoration: underline;
 }
