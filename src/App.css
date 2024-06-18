@@ -9,7 +9,8 @@
 }
 
 textarea {
-  width: 80%;
+  width: 50%; /* Adjusted width */
+  max-width: 600px; /* Optional: set a max-width */
   padding: 10px;
   margin: 10px;
   font-size: 16px;
